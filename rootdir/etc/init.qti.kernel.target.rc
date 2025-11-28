@@ -1,0 +1,14 @@
+#=============================================================================
+# Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+# All rights reserved.
+# Confidential and Proprietary - Qualcomm Technologies, Inc.
+#=============================================================================
+
+on early-init
+    write /sys/devices/system/cpu/cpufreq/policy6/scaling_max_freq 1977600
+
+on post-fs-data
+    wait_for_prop vendor.all.modules.ready 1
+
+on property:sys.boot_completed=1
+    write /proc/sys/fs/aio-max-nr 262144
