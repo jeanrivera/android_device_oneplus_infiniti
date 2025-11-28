@@ -1,4 +1,4 @@
-# Android device tree for oplus ossi (ossi)
+# Android device tree for oneplus 15 (infiniti)
 
 ```
 #
